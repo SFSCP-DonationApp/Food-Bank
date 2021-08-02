@@ -11,6 +11,8 @@
 		E9F9611226B8943800AF6929 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9611126B8943800AF6929 /* SceneDelegate.swift */; };
 		E9F9611426B8943800AF6929 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9611326B8943800AF6929 /* SignupVC.swift */; };
 		E9F9611926B8944C00AF6929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F9611826B8944C00AF6929 /* Assets.xcassets */; };
+		E9F9612C26B8A25200AF6929 /* SignupStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9612B26B8A25200AF6929 /* SignupStack.swift */; };
+		E9F9612E26B8A2AE00AF6929 /* JoinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9612D26B8A2AD00AF6929 /* JoinButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		E9F9611326B8943800AF6929 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		E9F9611826B8944C00AF6929 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9F9611D26B8944C00AF6929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F9612B26B8A25200AF6929 /* SignupStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupStack.swift; sourceTree = "<group>"; };
+		E9F9612D26B8A2AD00AF6929 /* JoinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 		E9F9612826B89DBA00AF6929 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9F9612B26B8A25200AF6929 /* SignupStack.swift */,
+				E9F9612D26B8A2AD00AF6929 /* JoinButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,9 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F9612C26B8A25200AF6929 /* SignupStack.swift in Sources */,
 				E9F9611426B8943800AF6929 /* SignupVC.swift in Sources */,
 				E9F9611026B8943800AF6929 /* AppDelegate.swift in Sources */,
 				E9F9611226B8943800AF6929 /* SceneDelegate.swift in Sources */,
+				E9F9612E26B8A2AE00AF6929 /* JoinButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
