@@ -28,6 +28,10 @@ class JoinButton: UIButton {
         self.setTitle("Join", for: .normal)
         self.layer.cornerRadius = 8
         self.layer.masksToBounds = true
-        //self.addTarget(self, action: #selector(self.goSearchPage), for: .touchUpInside)
+        self.addTarget(self, action: #selector(joinButtonPressed), for: .touchUpInside)
+    }
+
+    @objc func joinButtonPressed() {
+        print("Join button has been tapped.")
     }
 }

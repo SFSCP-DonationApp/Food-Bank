@@ -151,8 +151,10 @@ class SignupStack: UIView {
     }()
     let loginButton: UIButton = {
         let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Log In", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(SignupVC.loginButtonPressed), for: .touchUpInside)
         
         return button
     }()

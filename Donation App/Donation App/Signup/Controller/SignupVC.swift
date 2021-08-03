@@ -15,5 +15,9 @@ class SignupVC: UIViewController {
         self.view.backgroundColor = .systemGray6
         SignupStack(parentVC: self.view)
     }
+    
+    @objc func loginButtonPressed() {
+        print("Login button has been tapped.")
+    }
 }
 
