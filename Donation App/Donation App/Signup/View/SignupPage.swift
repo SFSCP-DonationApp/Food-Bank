@@ -67,6 +67,7 @@ class SignupPage: UIView {
         textField.placeholder = "Email"
         textField.borderStyle = .roundedRect
         textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         
         return textField
     }()
@@ -75,6 +76,7 @@ class SignupPage: UIView {
         textField.placeholder = "Street Address"
         textField.borderStyle = .roundedRect
         textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         
         return textField
     }()
@@ -94,6 +96,7 @@ class SignupPage: UIView {
         textField.placeholder = "City"
         textField.borderStyle = .roundedRect
         textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         
         return textField
     }()
@@ -103,6 +106,7 @@ class SignupPage: UIView {
         textField.placeholder = "Zipcode"
         textField.borderStyle = .roundedRect
         textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         
         return textField
     }()
@@ -112,6 +116,7 @@ class SignupPage: UIView {
         textField.placeholder = "Password"
         textField.borderStyle = .roundedRect
         textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         textField.isSecureTextEntry = true
         
         return textField
