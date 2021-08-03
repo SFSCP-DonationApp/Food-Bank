@@ -82,7 +82,7 @@ class SignupPage: UIView {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.distribution = .fill // direction of axis
+        stack.distribution = .fillEqually // direction of axis
         stack.alignment = .center // perpendicular to axis
         stack.spacing = 10
         
@@ -136,6 +136,7 @@ class SignupPage: UIView {
         button.contentHorizontalAlignment = .center
         button.setTitleColor(.white, for: .normal)
         button.setTitle("Join", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 23, weight: .semibold)
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true
         button.addTarget(self, action: #selector(SignupVC.joinButtonPressed), for: .touchUpInside)
@@ -166,6 +167,7 @@ class SignupPage: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Log In", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(SignupVC.loginButtonPressed), for: .touchUpInside)
         
@@ -229,7 +231,7 @@ class SignupPage: UIView {
             passwordTextField.heightAnchor.constraint(equalToConstant: 50),
             
             // bottomStack
-            bottomStack.topAnchor.constraint(equalTo: formStack.bottomAnchor, constant: 70),
+            bottomStack.topAnchor.constraint(equalTo: formStack.bottomAnchor, constant: 60),
             bottomStack.centerXAnchor.constraint(equalTo: viewController.centerXAnchor),
             bottomStack.widthAnchor.constraint(equalTo: viewController.widthAnchor, multiplier: 0.8),
             joinButton.widthAnchor.constraint(equalTo: bottomStack.widthAnchor),
