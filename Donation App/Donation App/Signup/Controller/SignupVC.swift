@@ -13,7 +13,7 @@ class SignupVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .systemGray6
-        SignupStack(parentVC: self.view)
+        LoginPage(parentVC: self.view)
     }
     
     @objc func loginButtonPressed() {

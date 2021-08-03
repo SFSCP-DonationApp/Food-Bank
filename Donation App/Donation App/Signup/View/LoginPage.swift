@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignupStack: UIView {
+class LoginPage: UIView {
     // MARK: Properties
     // Title and Subtitle
     let topStack: UIStackView = {
