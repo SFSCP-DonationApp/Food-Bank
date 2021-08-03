@@ -19,5 +19,9 @@ class SignupVC: UIViewController {
     @objc func loginButtonPressed() {
         print("Login button has been tapped.")
     }
+    
+    @objc func joinButtonPressed() {
+        print("Join button has been tapped.")
+    }
 }
 

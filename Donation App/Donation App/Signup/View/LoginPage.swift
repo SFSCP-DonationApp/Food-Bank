@@ -128,7 +128,20 @@ class LoginPage: UIView {
         
         return stack
     }()
-    let joinButton: UIButton = JoinButton()
+    let joinButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemYellow
+        button.tintColor = .systemGray
+        button.contentHorizontalAlignment = .center
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Join", for: .normal)
+        button.layer.cornerRadius = 8
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(SignupVC.joinButtonPressed), for: .touchUpInside)
+        
+        return button
+    }()
     let bottomHorizontalStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
