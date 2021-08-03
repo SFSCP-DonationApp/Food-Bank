@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2DCE94C26B91BFC00CC3A6C /* SignUpBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DCE94B26B91BFC00CC3A6C /* SignUpBackend.swift */; };
 		E9F9611026B8943800AF6929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9610F26B8943800AF6929 /* AppDelegate.swift */; };
 		E9F9611226B8943800AF6929 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9611126B8943800AF6929 /* SceneDelegate.swift */; };
 		E9F9611426B8943800AF6929 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9611326B8943800AF6929 /* SignupVC.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2DCE94B26B91BFC00CC3A6C /* SignUpBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBackend.swift; sourceTree = "<group>"; };
 		E9F9610C26B8943800AF6929 /* Donation App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Donation App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F9610F26B8943800AF6929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9F9611126B8943800AF6929 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2DCE94A26B91BCD00CC3A6C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A2DCE94B26B91BFC00CC3A6C /* SignUpBackend.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		E9F9610326B8943700AF6929 = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +75,7 @@
 				E9F9611D26B8944C00AF6929 /* Info.plist */,
 				E9F9612426B89D6000AF6929 /* Signup */,
 				EEF4597326B8E6AB0036002B /* Login */,
-				E9F9612626B89D9000AF6929 /* Model */,
+				A2DCE94A26B91BCD00CC3A6C /* Data */,
 				E9F9612326B89D4200AF6929 /* Resources */,
 			);
 			path = "Donation App";
@@ -86,13 +96,6 @@
 				E9F9612726B89DB300AF6929 /* Controller */,
 			);
 			path = Signup;
-			sourceTree = "<group>";
-		};
-		E9F9612626B89D9000AF6929 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E9F9612726B89DB300AF6929 /* Controller */ = {
@@ -209,6 +212,7 @@
 				E9F9612C26B8A25200AF6929 /* SignupStack.swift in Sources */,
 				EEF4597A26B8E6F40036002B /* LoginVC.swift in Sources */,
 				E9F9611426B8943800AF6929 /* SignupVC.swift in Sources */,
+				A2DCE94C26B91BFC00CC3A6C /* SignUpBackend.swift in Sources */,
 				E9F9611026B8943800AF6929 /* AppDelegate.swift in Sources */,
 				E9F9611226B8943800AF6929 /* SceneDelegate.swift in Sources */,
 				E9F9612E26B8A2AE00AF6929 /* JoinButton.swift in Sources */,
@@ -340,7 +344,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W4XQCV98MA;
 				INFOPLIST_FILE = "Donation App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,7 +364,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W4XQCV98MA;
 				INFOPLIST_FILE = "Donation App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
