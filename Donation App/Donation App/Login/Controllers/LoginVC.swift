@@ -93,7 +93,7 @@ class LoginVC: UIViewController {
       }
     
     @objc func backButtonPressed(sender: UIButton!){
-        print("Take me back to Sign up page!")
+        UIApplication.shared.windows.first?.rootViewController = SignupVC()
     }
     @objc func loginButtonPressed(sender: UIButton!){
         print("button pressed!")
@@ -103,7 +103,7 @@ class LoginVC: UIViewController {
         print("I forgot my password, help!")
     }
     @objc func signupPressed(sender: UIButton!){
-        print("Take me to the signup page")
+        UIApplication.shared.windows.first?.rootViewController = SignupVC()
     }
 }
 

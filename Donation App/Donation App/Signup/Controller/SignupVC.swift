@@ -17,7 +17,7 @@ class SignupVC: UIViewController {
     }
     
     @objc func loginButtonPressed() {
-        print("Login button has been tapped.")
+        UIApplication.shared.windows.first?.rootViewController = LoginVC()
     }
     
     @objc func joinButtonPressed() {
