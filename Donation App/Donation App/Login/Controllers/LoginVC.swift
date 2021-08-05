@@ -97,6 +97,10 @@ class LoginVC: UIViewController {
     }
     @objc func loginButtonPressed(sender: UIButton!){
         print("button pressed!")
+        let errorLabel = UILabel()
+        let existingUser = ExistingUser(email: emailTextField.text!, password: passwordTextField.text!)
+        LogIn().LoginTap(ExistingUser: existingUser, errorLabel: errorLabel)
+        
     }
     
     @objc func forgotPasswordPressed(sender: UIButton!){

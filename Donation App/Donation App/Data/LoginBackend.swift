@@ -30,6 +30,7 @@ class LogIn {
                 if err != nil {
                     errorLabel.text = err!.localizedDescription
                     errorLabel.alpha = 1
+                    
                 }
             }
         }
@@ -42,15 +43,7 @@ class LogIn {
                 {
                 return "Please fill in all fields"
             }
-            //ensure password is secure
-            if self.isPasswordValid(ExistingUser.password) == false {
-                return "Please make a stronger password"
-            }
             return nil
-        }
-    func isPasswordValid(_ password : String) -> Bool {
-            let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
-            return passwordTest.evaluate(with: password)
         }
     func showError(_ message:String, errorLabel:UILabel){
             errorLabel.text = message
