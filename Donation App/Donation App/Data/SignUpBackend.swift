@@ -18,7 +18,6 @@ struct NewUser {
     let address: String
     let city: String
     let zipcode: String
-    let phone: String
     let password: String
     var weightDonated: Int  = 0
     var totalDonations: Int  = 0
@@ -46,7 +45,6 @@ class SignUp {
                             "address":NewUser.address,
                             "city":NewUser.city,
                             "zipcode":NewUser.zipcode,
-                            "phone":NewUser.phone,
                             "weightDonated":NewUser.weightDonated,
                             "totalDonations":NewUser.totalDonations,
                             "uid":result!.user.uid
@@ -67,7 +65,6 @@ class SignUp {
             NewUser.address == "" ||
             NewUser.city == "" ||
             NewUser.zipcode == "" ||
-            NewUser.phone == "" ||
             NewUser.password == ""
             {
             return "Please fill in all fields"
