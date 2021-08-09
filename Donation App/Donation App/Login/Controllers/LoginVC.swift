@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginVC: UIViewController {
     
@@ -77,6 +78,7 @@ class LoginVC: UIViewController {
 //        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "sfscp_create.png")!)
         setupLoginContentView()
         assignbackground()
+        print(Auth.auth().currentUser?.email)
     }
     
     func assignbackground(){
@@ -100,7 +102,7 @@ class LoginVC: UIViewController {
         let errorLabel = UILabel()
         let existingUser = ExistingUser(email: emailTextField.text!, password: passwordTextField.text!)
         LogIn().LoginTap(ExistingUser: existingUser, errorLabel: errorLabel)
-        
+        print(Auth.auth().currentUser?.email)
     }
     
     @objc func forgotPasswordPressed(sender: UIButton!){

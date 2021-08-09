@@ -6,16 +6,18 @@
 //
 
 import Foundation
+import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 
 struct ExistingUser {
     let email:String
     let password: String
+//    var isAuth: Bool = false
 }
 
 class LogIn {
-    func LoginTap(ExistingUser: ExistingUser, errorLabel:UILabel) {
+    func LoginTap(ExistingUser: ExistingUser, errorLabel:UILabel){
         
         //Validate fields
         let error = validateFields(ExistingUser: ExistingUser)
@@ -30,7 +32,6 @@ class LogIn {
                 if err != nil {
                     errorLabel.text = err!.localizedDescription
                     errorLabel.alpha = 1
-                    
                 }
             }
         }
@@ -49,6 +50,18 @@ class LogIn {
             errorLabel.text = message
             errorLabel.alpha = 1
         }
+    
+    func isUserLoggedIn() -> Bool {
+      return Auth.auth().currentUser != nil
+    }
+    
+    func LogOutUser() {
+        do {
+          try Auth.auth().signOut()
+        } catch {
+          print("Sign out error")
+        }
+    }
         
     }
 
