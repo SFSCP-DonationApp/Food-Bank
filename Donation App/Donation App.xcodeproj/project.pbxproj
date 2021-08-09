@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A2BA291826B91F0C00506D26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2BA291726B91F0C00506D26 /* GoogleService-Info.plist */; };
 		A2BA291B26B922F000506D26 /* LoginBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA291A26B922F000506D26 /* LoginBackend.swift */; };
+		A2DA315426C0F85B0008A27C /* DataQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA315326C0F85B0008A27C /* DataQueries.swift */; };
 		A2DCE94C26B91BFC00CC3A6C /* SignUpBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DCE94B26B91BFC00CC3A6C /* SignUpBackend.swift */; };
 		CC0ED977E3DFEE7CF05585D0 /* Pods_Donation_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC1D6C868AFCCF03D0AA1E6 /* Pods_Donation_App.framework */; };
 		E9F9611026B8943800AF6929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9610F26B8943800AF6929 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 		78BDBD1334998083C798AC79 /* Pods-Donation App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donation App.release.xcconfig"; path = "Target Support Files/Pods-Donation App/Pods-Donation App.release.xcconfig"; sourceTree = "<group>"; };
 		A2BA291726B91F0C00506D26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2BA291A26B922F000506D26 /* LoginBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBackend.swift; sourceTree = "<group>"; };
+		A2DA315326C0F85B0008A27C /* DataQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataQueries.swift; sourceTree = "<group>"; };
 		A2DCE94B26B91BFC00CC3A6C /* SignUpBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBackend.swift; sourceTree = "<group>"; };
 		AA369B05F3B1FDB28478F51E /* Pods-Donation App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donation App.debug.xcconfig"; path = "Target Support Files/Pods-Donation App/Pods-Donation App.debug.xcconfig"; sourceTree = "<group>"; };
 		E9F9610C26B8943800AF6929 /* Donation App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Donation App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,7 @@
 			children = (
 				A2DCE94B26B91BFC00CC3A6C /* SignUpBackend.swift */,
 				A2BA291A26B922F000506D26 /* LoginBackend.swift */,
+				A2DA315326C0F85B0008A27C /* DataQueries.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				EEF4597A26B8E6F40036002B /* LoginVC.swift in Sources */,
 				E9F9611426B8943800AF6929 /* SignupVC.swift in Sources */,
 				A2DCE94C26B91BFC00CC3A6C /* SignUpBackend.swift in Sources */,
+				A2DA315426C0F85B0008A27C /* DataQueries.swift in Sources */,
 				E9F9611026B8943800AF6929 /* AppDelegate.swift in Sources */,
 				E9F9611226B8943800AF6929 /* SceneDelegate.swift in Sources */,
 			);
