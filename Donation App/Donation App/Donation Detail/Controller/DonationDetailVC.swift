@@ -27,6 +27,15 @@ class DonationDetailVC: UIViewController {
     }
     
     // MARK: Methods
+    @objc func reserveDonationButtonPressed() {
+        
+        print("Reserve donation slot!")
+        
+    }
     
-
+    @objc func backButtonPressed() {
+        
+        print("Back button pressed!")
+        
+    }
 }

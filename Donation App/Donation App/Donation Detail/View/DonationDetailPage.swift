@@ -22,24 +22,19 @@ class DonationDetailPage: UIView {
     let backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-//        button.backgroundColor = .systemYellow
-//        button.tintColor = .systemGray
-//        button.contentHorizontalAlignment = .center
-//        button.setTitleColor(.black, for: .normal)
         button.setTitle("Back", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 23, weight: .semibold)
         button.setTitleColor(.black, for: .normal)
-//        button.layer.cornerRadius = 8
-//        button.layer.masksToBounds = true
-//        button.addTarget(self, action: #selector(SignupVC.joinButtonPressed), for: .touchUpInside)
+        button.setTitleColor(.darkGray, for: .highlighted)
+        button.addTarget(self, action: #selector(DonationDetailVC.backButtonPressed), for: .touchUpInside)
         
         return button
     }()
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 42, weight: .regular)
-        label.tintColor = .systemYellow
+        label.font = UIFont.systemFont(ofSize: 38, weight: .semibold)
+        label.textColor = .systemYellow
         label.numberOfLines = 0
         label.textAlignment = .left
         label.text = "Donation details"
@@ -53,7 +48,7 @@ class DonationDetailPage: UIView {
         stack.axis = .vertical
         stack.distribution = .fill // direction of axis
         stack.alignment = .fill // perpendicular to axis
-        stack.spacing = 15
+        stack.spacing = 40
         
         return stack
     }()
@@ -72,6 +67,7 @@ class DonationDetailPage: UIView {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Add the weight"
+        textField.keyboardType = .decimalPad
 
         return textField
     }()
@@ -82,17 +78,33 @@ class DonationDetailPage: UIView {
         label.tintColor = .systemGray
         label.numberOfLines = 0
         label.textAlignment = .left
-        label.text = "What time will you come?"
+        label.text = "At what time will you come?"
         
         return label
     }()
-    let timeTextField: UITextField = {
+    lazy var timeTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Add the time"
+        textField.inputView = self.datePicker
 
         return textField
     }()
+    let datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.datePickerMode = .dateAndTime
+        
+        return datePicker
+    }()
+    let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        
+        return dateFormatter
+    }()
+    
     
     let bottomStack: UIStackView = {
         let stack = UIStackView()
@@ -114,7 +126,7 @@ class DonationDetailPage: UIView {
         
         return stack
     }()
-    let checkboxButton: UIButton = {
+    lazy var checkboxButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .black
@@ -122,6 +134,10 @@ class DonationDetailPage: UIView {
         button.setImage(UIImage(systemName: "checkmark.rectangle.fill"), for: .selected)
         button.contentVerticalAlignment = .fill
         button.contentHorizontalAlignment = .fill
+        button.setContentHuggingPriority(.required, for: .horizontal)
+        button.setContentHuggingPriority(.required, for: .vertical)
+        button.addTarget(self, action: #selector(self.changeButtonState), for: .touchUpInside)
+        
         
         return button
     }()
@@ -129,7 +145,7 @@ class DonationDetailPage: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        label.numberOfLines = 1
+        label.numberOfLines = 0
         label.textAlignment = .left
         label.text = "I agree that all food quality donated has been mantained."
         
@@ -147,10 +163,12 @@ class DonationDetailPage: UIView {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 23, weight: .semibold)
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true
-        button.addTarget(self, action: #selector(SignupVC.joinButtonPressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(DonationDetailVC.reserveDonationButtonPressed), for: .touchUpInside)
         
         return button
     }()
+    
+    lazy var tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
     
     // MARK: Methods
     override init(frame: CGRect) {
@@ -188,21 +206,25 @@ class DonationDetailPage: UIView {
         // MARK: Constraints
         NSLayoutConstraint.activate([
             // topStack
-            topStack.topAnchor.constraint(equalTo: viewController.safeAreaLayoutGuide.topAnchor, constant: 60),
+            topStack.topAnchor.constraint(equalTo: viewController.safeAreaLayoutGuide.topAnchor, constant: 40),
             topStack.centerXAnchor.constraint(equalTo: viewController.centerXAnchor),
             topStack.widthAnchor.constraint(equalTo: viewController.widthAnchor, multiplier: 0.8),
             
             // formStack
-            formStack.topAnchor.constraint(equalTo: topStack.bottomAnchor, constant: 70),
+            formStack.topAnchor.constraint(equalTo: topStack.bottomAnchor, constant: 60),
             formStack.widthAnchor.constraint(equalTo: viewController.widthAnchor, multiplier: 0.8),
             formStack.centerXAnchor.constraint(equalTo: viewController.centerXAnchor),
             
             // bottomStack
-            bottomStack.topAnchor.constraint(equalTo: formStack.bottomAnchor, constant: 60),
+            bottomStack.bottomAnchor.constraint(equalTo: viewController.safeAreaLayoutGuide.bottomAnchor, constant: -40),
             bottomStack.centerXAnchor.constraint(equalTo: viewController.centerXAnchor),
             bottomStack.widthAnchor.constraint(equalTo: viewController.widthAnchor, multiplier: 0.8),
+            bottomHorizontalStack.widthAnchor.constraint(equalTo: bottomStack.widthAnchor),
             joinButton.widthAnchor.constraint(equalTo: bottomStack.widthAnchor)
          ])
+        
+        // MARK: Gesture Recognizer
+        viewController.addGestureRecognizer(tapGesture)
     }
     
     func setUpTextFieldsBorders() {
@@ -214,7 +236,7 @@ class DonationDetailPage: UIView {
         // create bottom line
         let bottomLine = CALayer()
         
-        bottomLine.frame = CGRect(x: 0, y: textField.frame.height - 2, width: textField.frame.width, height: 2)
+        bottomLine.frame = CGRect(x: 0, y: textField.frame.height - 1, width: textField.frame.width, height: 2)
 
         bottomLine.backgroundColor = UIColor.systemYellow.cgColor
         
@@ -223,5 +245,34 @@ class DonationDetailPage: UIView {
         
         // Add the line to the text field
         textField.layer.addSublayer(bottomLine)
+    }
+
+    @objc func changeButtonState() {
+        
+        if checkboxButton.isSelected {
+            print("Checkbox is about to be set to Not Selected!")
+            checkboxButton.isSelected = false
+        } else {
+            print("Checkbox is about to be set to Selected!")
+            checkboxButton.isSelected = true
+        }
+    }
+    
+    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+
+        // dismiss keyboard for weight text field
+        if weightTextField.isEditing {
+            
+            weightTextField.resignFirstResponder()
+        }
+        
+        // dismiss keyboard for time text field
+        if timeTextField.isEditing {
+            
+            timeTextField.text = dateFormatter.string(from: datePicker.date)
+            timeTextField.resignFirstResponder()
+        }
+        
+        
     }
 }
