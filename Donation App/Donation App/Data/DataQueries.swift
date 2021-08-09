@@ -14,7 +14,7 @@ let userRef = db.collection("users")
 let foodBankRef = db.collection("foodbanks")
 
 class UserQuery {
-    func getUserZipcode() -> String {
+    func getUserZipcode() {
         
     }
 }
