@@ -14,6 +14,8 @@
 		CC0ED977E3DFEE7CF05585D0 /* Pods_Donation_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC1D6C868AFCCF03D0AA1E6 /* Pods_Donation_App.framework */; };
 		E9B6603A26BF04FD00E769F2 /* DonationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6603926BF04FD00E769F2 /* DonationDetailVC.swift */; };
 		E9B6603C26BF051E00E769F2 /* DonationDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6603B26BF051E00E769F2 /* DonationDetailPage.swift */; };
+		E9E32A4426C1DE92002B3C14 /* ConfirmationPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E32A4326C1DE92002B3C14 /* ConfirmationPageVC.swift */; };
+		E9E32A4626C1DEC0002B3C14 /* ConfirmationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E32A4526C1DEC0002B3C14 /* ConfirmationPage.swift */; };
 		E9F9611026B8943800AF6929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9610F26B8943800AF6929 /* AppDelegate.swift */; };
 		E9F9611226B8943800AF6929 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9611126B8943800AF6929 /* SceneDelegate.swift */; };
 		E9F9611426B8943800AF6929 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9611326B8943800AF6929 /* SignupVC.swift */; };
@@ -32,6 +34,8 @@
 		AA369B05F3B1FDB28478F51E /* Pods-Donation App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donation App.debug.xcconfig"; path = "Target Support Files/Pods-Donation App/Pods-Donation App.debug.xcconfig"; sourceTree = "<group>"; };
 		E9B6603926BF04FD00E769F2 /* DonationDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationDetailVC.swift; sourceTree = "<group>"; };
 		E9B6603B26BF051E00E769F2 /* DonationDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationDetailPage.swift; sourceTree = "<group>"; };
+		E9E32A4326C1DE92002B3C14 /* ConfirmationPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPageVC.swift; sourceTree = "<group>"; };
+		E9E32A4526C1DEC0002B3C14 /* ConfirmationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPage.swift; sourceTree = "<group>"; };
 		E9F9610C26B8943800AF6929 /* Donation App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Donation App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F9610F26B8943800AF6929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9F9611126B8943800AF6929 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,31 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E9E32A4026C1DE46002B3C14 /* Confirmation Page */ = {
+			isa = PBXGroup;
+			children = (
+				E9E32A4226C1DE6F002B3C14 /* View */,
+				E9E32A4126C1DE69002B3C14 /* Controller */,
+			);
+			path = "Confirmation Page";
+			sourceTree = "<group>";
+		};
+		E9E32A4126C1DE69002B3C14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9E32A4326C1DE92002B3C14 /* ConfirmationPageVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E9E32A4226C1DE6F002B3C14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9E32A4526C1DEC0002B3C14 /* ConfirmationPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E9F9610326B8943700AF6929 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +157,7 @@
 				E9F9612426B89D6000AF6929 /* Signup */,
 				EEF4597326B8E6AB0036002B /* Login */,
 				E9B6603626BF046D00E769F2 /* Donation Detail */,
+				E9E32A4026C1DE46002B3C14 /* Confirmation Page */,
 				A2DCE94A26B91BCD00CC3A6C /* Data */,
 				E9F9612326B89D4200AF6929 /* Resources */,
 			);
@@ -315,10 +345,12 @@
 			files = (
 				EEF4597826B8E6DC0036002B /* LoginView.swift in Sources */,
 				E9B6603A26BF04FD00E769F2 /* DonationDetailVC.swift in Sources */,
+				E9E32A4626C1DEC0002B3C14 /* ConfirmationPage.swift in Sources */,
 				E9F9612C26B8A25200AF6929 /* SignupPage.swift in Sources */,
 				A2BA291B26B922F000506D26 /* LoginBackend.swift in Sources */,
 				EEF4597A26B8E6F40036002B /* LoginVC.swift in Sources */,
 				E9F9611426B8943800AF6929 /* SignupVC.swift in Sources */,
+				E9E32A4426C1DE92002B3C14 /* ConfirmationPageVC.swift in Sources */,
 				A2DCE94C26B91BFC00CC3A6C /* SignUpBackend.swift in Sources */,
 				E9B6603C26BF051E00E769F2 /* DonationDetailPage.swift in Sources */,
 				A2DA315426C0F85B0008A27C /* DataQueries.swift in Sources */,
