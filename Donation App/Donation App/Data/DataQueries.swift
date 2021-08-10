@@ -16,7 +16,6 @@ import FirebaseFirestoreSwift
 class UserQuery: ObservableObject {
     private var db = Firestore.firestore()
     @Published var users = [UserMap]()
-
         struct UserMap {
             let name: String
             let address: String
@@ -27,10 +26,6 @@ class UserQuery: ObservableObject {
             let totalDonated: Int
         
     }
-
-    
-
-    
     func fetchData() {
         
         db.collection("users").addSnapshotListener{ (querySnapshot, error) in
@@ -51,7 +46,6 @@ class UserQuery: ObservableObject {
                 
                 return UserMap(name: name, address: address, uid: uid, zipcode: zipcode, city: city, weightDonated: weightDonated, totalDonated: totalDonations)
             }
-            
     }
     
 }
