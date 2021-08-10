@@ -57,3 +57,34 @@ class UserQuery: ObservableObject {
 }
 
 }
+
+class foodBankQuery: ObservableObject {
+    
+    private var db = Firestore.firestore()
+    @Published var foodBanks = [foodBank]()
+    
+    struct foodBank{
+        let name: String
+        let Zipcode: String
+        let max_capacity: Int
+        let current_capacity: Int
+    }
+    
+    func fetchData() {
+        db.collection("foodbanks").addSnapshotListener{ (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else{
+                print("No Documents")
+                return
+            }
+            self.foodBanks = documents.map{ (querySnapshot) -> foodBank in
+                let data = querySnapshot.data()
+                let name = data["name"] as? String ?? ""
+                let zipcode = data["Zipcode"] as? String ?? ""
+                let max_capacity = data["max_capacity"] as? Int ?? 0
+                let current_capacity = data["current_capacity"] as? Int ?? 0
+                
+                return foodBank(name: name, Zipcode: zipcode, max_capacity: max_capacity, current_capacity: current_capacity)
+            }
+        }
+    }
+}
