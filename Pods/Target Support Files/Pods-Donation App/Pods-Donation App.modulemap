@@ -1,0 +1,6 @@
+framework module Pods_Donation_App {
+  umbrella header "Pods-Donation App-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -3,31 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2BA291826B91F0C00506D26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2BA291726B91F0C00506D26 /* GoogleService-Info.plist */; };
+		A2BA291B26B922F000506D26 /* LoginBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA291A26B922F000506D26 /* LoginBackend.swift */; };
+		A2DCE94C26B91BFC00CC3A6C /* SignUpBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DCE94B26B91BFC00CC3A6C /* SignUpBackend.swift */; };
+		CC0ED977E3DFEE7CF05585D0 /* Pods_Donation_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC1D6C868AFCCF03D0AA1E6 /* Pods_Donation_App.framework */; };
 		E9F9611026B8943800AF6929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9610F26B8943800AF6929 /* AppDelegate.swift */; };
 		E9F9611226B8943800AF6929 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9611126B8943800AF6929 /* SceneDelegate.swift */; };
 		E9F9611426B8943800AF6929 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9611326B8943800AF6929 /* SignupVC.swift */; };
 		E9F9611926B8944C00AF6929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F9611826B8944C00AF6929 /* Assets.xcassets */; };
-		E9F9612C26B8A25200AF6929 /* SignupStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9612B26B8A25200AF6929 /* SignupStack.swift */; };
-		E9F9612E26B8A2AE00AF6929 /* JoinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9612D26B8A2AD00AF6929 /* JoinButton.swift */; };
-		EEF4597026B8BD350036002B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4596F26B8BD350036002B /* LoginVC.swift */; };
-		EEF4597226B8BDEC0036002B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4597126B8BDEC0036002B /* LoginView.swift */; };
+		E9F9612C26B8A25200AF6929 /* SignupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9612B26B8A25200AF6929 /* SignupPage.swift */; };
+		EE45F0F526BCE5C200CFF6D6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45F0F426BCE5C200CFF6D6 /* HomeVC.swift */; };
+		EEE5362926BD93CA00918472 /* FoodBankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5362826BD93CA00918472 /* FoodBankCell.swift */; };
+		EEE5362B26BD9F3E00918472 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5362A26BD9F3E00918472 /* Section.swift */; };
+		EEE5362D26BDA0CC00918472 /* FoodBankSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5362C26BDA0CC00918472 /* FoodBankSection.swift */; };
+		EEE5363026BDB4D200918472 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5362F26BDB4D200918472 /* CardModel.swift */; };
+		EEF4597826B8E6DC0036002B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4597726B8E6DC0036002B /* LoginView.swift */; };
+		EEF4597A26B8E6F40036002B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4597926B8E6F40036002B /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78BDBD1334998083C798AC79 /* Pods-Donation App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donation App.release.xcconfig"; path = "Target Support Files/Pods-Donation App/Pods-Donation App.release.xcconfig"; sourceTree = "<group>"; };
+		A2BA291726B91F0C00506D26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A2BA291A26B922F000506D26 /* LoginBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBackend.swift; sourceTree = "<group>"; };
+		A2DCE94B26B91BFC00CC3A6C /* SignUpBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBackend.swift; sourceTree = "<group>"; };
+		AA369B05F3B1FDB28478F51E /* Pods-Donation App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donation App.debug.xcconfig"; path = "Target Support Files/Pods-Donation App/Pods-Donation App.debug.xcconfig"; sourceTree = "<group>"; };
 		E9F9610C26B8943800AF6929 /* Donation App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Donation App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F9610F26B8943800AF6929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9F9611126B8943800AF6929 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E9F9611326B8943800AF6929 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		E9F9611826B8944C00AF6929 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9F9611D26B8944C00AF6929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9F9612B26B8A25200AF6929 /* SignupStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupStack.swift; sourceTree = "<group>"; };
-		E9F9612D26B8A2AD00AF6929 /* JoinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinButton.swift; sourceTree = "<group>"; };
-		EEF4596F26B8BD350036002B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = SOURCE_ROOT; };
-		EEF4597126B8BDEC0036002B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = SOURCE_ROOT; };
+		E9F9612B26B8A25200AF6929 /* SignupPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPage.swift; sourceTree = "<group>"; };
+		EDC1D6C868AFCCF03D0AA1E6 /* Pods_Donation_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Donation_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE45F0F426BCE5C200CFF6D6 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		EEE5362826BD93CA00918472 /* FoodBankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBankCell.swift; sourceTree = "<group>"; };
+		EEE5362A26BD9F3E00918472 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		EEE5362C26BDA0CC00918472 /* FoodBankSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBankSection.swift; sourceTree = "<group>"; };
+		EEE5362F26BDB4D200918472 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		EEF4597726B8E6DC0036002B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EEF4597926B8E6F40036002B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +53,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC0ED977E3DFEE7CF05585D0 /* Pods_Donation_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C7C182D89C8091828CAF4C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA369B05F3B1FDB28478F51E /* Pods-Donation App.debug.xcconfig */,
+				78BDBD1334998083C798AC79 /* Pods-Donation App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A2DCE94A26B91BCD00CC3A6C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A2DCE94B26B91BFC00CC3A6C /* SignUpBackend.swift */,
+				A2BA291A26B922F000506D26 /* LoginBackend.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		E9F9610326B8943700AF6929 = {
 			isa = PBXGroup;
 			children = (
 				E9F9610E26B8943800AF6929 /* Donation App */,
 				E9F9610D26B8943800AF6929 /* Products */,
+				7C7C182D89C8091828CAF4C9 /* Pods */,
+				FFDF3276BC3F2386A5C77E87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,12 +99,15 @@
 		E9F9610E26B8943800AF6929 /* Donation App */ = {
 			isa = PBXGroup;
 			children = (
+				A2BA291726B91F0C00506D26 /* GoogleService-Info.plist */,
 				E9F9610F26B8943800AF6929 /* AppDelegate.swift */,
 				E9F9611126B8943800AF6929 /* SceneDelegate.swift */,
 				E9F9611D26B8944C00AF6929 /* Info.plist */,
 				E9F9612426B89D6000AF6929 /* Signup */,
-				E9F9612526B89D7A00AF6929 /* Login */,
-				E9F9612626B89D9000AF6929 /* Model */,
+				EEF4597326B8E6AB0036002B /* Login */,
+				EEE5362E26BDB47900918472 /* Models */,
+				EEE5362026BD931200918472 /* Home */,
+				A2DCE94A26B91BCD00CC3A6C /* Data */,
 				E9F9612326B89D4200AF6929 /* Resources */,
 			);
 			path = "Donation App";
@@ -88,22 +130,6 @@
 			path = Signup;
 			sourceTree = "<group>";
 		};
-		E9F9612526B89D7A00AF6929 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				E9F9612A26B89DCC00AF6929 /* View */,
-				E9F9612926B89DBF00AF6929 /* Controller */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		E9F9612626B89D9000AF6929 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		E9F9612726B89DB300AF6929 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,26 +141,93 @@
 		E9F9612826B89DBA00AF6929 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E9F9612B26B8A25200AF6929 /* SignupStack.swift */,
-				E9F9612D26B8A2AD00AF6929 /* JoinButton.swift */,
+				E9F9612B26B8A25200AF6929 /* SignupPage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		E9F9612926B89DBF00AF6929 /* Controller */ = {
+		EEE5362026BD931200918472 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				EEF4596F26B8BD350036002B /* LoginVC.swift */,
+				EEE5362626BD939C00918472 /* Sections */,
+				EEE5362526BD939400918472 /* Controllers */,
+				EEE5362426BD939000918472 /* Views */,
 			);
-			path = Controller;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		E9F9612A26B89DCC00AF6929 /* View */ = {
+		EEE5362426BD939000918472 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EEF4597126B8BDEC0036002B /* LoginView.swift */,
+				EEE5362726BD93A900918472 /* Cells */,
+				EEE5362A26BD9F3E00918472 /* Section.swift */,
 			);
-			path = View;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EEE5362526BD939400918472 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE45F0F426BCE5C200CFF6D6 /* HomeVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EEE5362626BD939C00918472 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5362C26BDA0CC00918472 /* FoodBankSection.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		EEE5362726BD93A900918472 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5362826BD93CA00918472 /* FoodBankCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EEE5362E26BDB47900918472 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5362F26BDB4D200918472 /* CardModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EEF4597326B8E6AB0036002B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EEF4597526B8E6C00036002B /* Views */,
+				EEF4597626B8E6C60036002B /* Controllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EEF4597526B8E6C00036002B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEF4597726B8E6DC0036002B /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EEF4597626B8E6C60036002B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EEF4597926B8E6F40036002B /* LoginVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FFDF3276BC3F2386A5C77E87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDC1D6C868AFCCF03D0AA1E6 /* Pods_Donation_App.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9F9612026B8944C00AF6929 /* Build configuration list for PBXNativeTarget "Donation App" */;
 			buildPhases = (
+				BD959C90341C5758CDA6A2E4 /* [CP] Check Pods Manifest.lock */,
 				E9F9610826B8943800AF6929 /* Sources */,
 				E9F9610926B8943800AF6929 /* Frameworks */,
 				E9F9610A26B8943800AF6929 /* Resources */,
+				9F3DA501B08E70AEE8705239 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,23 +290,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F9611926B8944C00AF6929 /* Assets.xcassets in Resources */,
+				A2BA291826B91F0C00506D26 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F3DA501B08E70AEE8705239 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Donation App/Pods-Donation App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Donation App/Pods-Donation App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Donation App/Pods-Donation App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD959C90341C5758CDA6A2E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Donation App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9F9610826B8943800AF6929 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9F9612C26B8A25200AF6929 /* SignupStack.swift in Sources */,
-				EEF4597226B8BDEC0036002B /* LoginView.swift in Sources */,
+				EEF4597826B8E6DC0036002B /* LoginView.swift in Sources */,
+				E9F9612C26B8A25200AF6929 /* SignupPage.swift in Sources */,
+				A2BA291B26B922F000506D26 /* LoginBackend.swift in Sources */,
+				EE45F0F526BCE5C200CFF6D6 /* HomeVC.swift in Sources */,
+				EEE5362B26BD9F3E00918472 /* Section.swift in Sources */,
+				EEE5363026BDB4D200918472 /* CardModel.swift in Sources */,
+				EEF4597A26B8E6F40036002B /* LoginVC.swift in Sources */,
+				EEE5362926BD93CA00918472 /* FoodBankCell.swift in Sources */,
 				E9F9611426B8943800AF6929 /* SignupVC.swift in Sources */,
-				EEF4597026B8BD350036002B /* LoginVC.swift in Sources */,
+				A2DCE94C26B91BFC00CC3A6C /* SignUpBackend.swift in Sources */,
+				EEE5362D26BDA0CC00918472 /* FoodBankSection.swift in Sources */,
 				E9F9611026B8943800AF6929 /* AppDelegate.swift in Sources */,
 				E9F9611226B8943800AF6929 /* SceneDelegate.swift in Sources */,
-				E9F9612E26B8A2AE00AF6929 /* JoinButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,11 +480,14 @@
 		};
 		E9F9612126B8944C00AF6929 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA369B05F3B1FDB28478F51E /* Pods-Donation App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W4XQCV98MA;
 				INFOPLIST_FILE = "Donation App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,11 +501,14 @@
 		};
 		E9F9612226B8944C00AF6929 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78BDBD1334998083C798AC79 /* Pods-Donation App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W4XQCV98MA;
 				INFOPLIST_FILE = "Donation App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
