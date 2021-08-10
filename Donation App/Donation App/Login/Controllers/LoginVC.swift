@@ -78,7 +78,7 @@ class LoginVC: UIViewController {
 //        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "sfscp_create.png")!)
         setupLoginContentView()
         assignbackground()
-        print(Auth.auth().currentUser?.email)
+        
     }
     
     func assignbackground(){
