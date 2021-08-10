@@ -125,16 +125,10 @@ class FoodBankCell: UICollectionViewCell {
         donateButton.tintColor = .white
     }
     
-    func setContents(foodBanks: FoodBanks) {
-        for name in foodBanks.name {
-            nameLabel.text = name
-        }
-        for address in foodBanks.address {
-            addressLabel.text = address
-        }
-        for hour in foodBanks.hours {
-            hourLabel.text = hour
-        }
+    func setContents(foodBank: FoodBanks) {
+        nameLabel.text = foodBank.returnName()
+        addressLabel.text = foodBank.returnAddress()
+        hourLabel.text = foodBank.returnHours()
     }
     
     @objc func donateButtonPressed(sender: UIButton!){

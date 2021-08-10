@@ -10,7 +10,20 @@ import UIKit
 class HomeVC: UIViewController {
     // MARK: Properties
     var collectionView: UICollectionView!
+    
+    let foodBanks: [FoodBanks] = [FoodBanks(name: "Food Bank Distribution center", address: "4000 Redwood Rd", hours: "8am-12pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30am-5pm")]
 
+    lazy var sections: [Section] = [
+           FoodBankSection(items: foodBanks)
+       ]
+       lazy var collectionViewLayout: UICollectionViewLayout = {
+           var sections = self.sections
+           let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
+               
+               return sections[sectionIndex].layoutSection()
+           }
+           return layout
+       }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
