@@ -28,13 +28,13 @@ struct AmountDonatedSection: Section {
         
         //group size
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.5))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.98), heightDimension: .fractionalWidth(0.5))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
         
         //section size
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 100, trailing: 5)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 5, bottom: 90, trailing: 5)
         
         return section
     }
