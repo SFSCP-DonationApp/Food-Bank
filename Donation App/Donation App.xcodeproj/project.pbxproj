@@ -15,6 +15,8 @@
 		E935261626C42BFA003F5511 /* FoodBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935261526C42BFA003F5511 /* FoodBank.swift */; };
 		E935261826C4307B003F5511 /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935261726C4307B003F5511 /* TitleSection.swift */; };
 		E935261A26C430A6003F5511 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935261926C430A6003F5511 /* TitleCell.swift */; };
+		E935261D26C43411003F5511 /* SubTitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935261C26C43411003F5511 /* SubTitleSection.swift */; };
+		E935261F26C43462003F5511 /* SubTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935261E26C43462003F5511 /* SubTitleCell.swift */; };
 		E97BC72526C3F321007A33E7 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BC72426C3F321007A33E7 /* Section.swift */; };
 		E97BC72826C3F3C2007A33E7 /* FoodBankSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BC72726C3F3C2007A33E7 /* FoodBankSection.swift */; };
 		E97BC72A26C3F425007A33E7 /* FoodBankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BC72926C3F425007A33E7 /* FoodBankCell.swift */; };
@@ -40,6 +42,8 @@
 		E935261526C42BFA003F5511 /* FoodBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBank.swift; sourceTree = "<group>"; };
 		E935261726C4307B003F5511 /* TitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
 		E935261926C430A6003F5511 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		E935261C26C43411003F5511 /* SubTitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTitleSection.swift; sourceTree = "<group>"; };
+		E935261E26C43462003F5511 /* SubTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTitleCell.swift; sourceTree = "<group>"; };
 		E97BC72426C3F321007A33E7 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		E97BC72726C3F3C2007A33E7 /* FoodBankSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBankSection.swift; sourceTree = "<group>"; };
 		E97BC72926C3F425007A33E7 /* FoodBankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBankCell.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				E935261926C430A6003F5511 /* TitleCell.swift */,
+				E935261E26C43462003F5511 /* SubTitleCell.swift */,
 				E97BC72926C3F425007A33E7 /* FoodBankCell.swift */,
 			);
 			path = View;
@@ -130,6 +135,7 @@
 			children = (
 				E97BC72426C3F321007A33E7 /* Section.swift */,
 				E935261726C4307B003F5511 /* TitleSection.swift */,
+				E935261C26C43411003F5511 /* SubTitleSection.swift */,
 				E97BC72726C3F3C2007A33E7 /* FoodBankSection.swift */,
 			);
 			path = Section;
@@ -383,11 +389,13 @@
 				EEF4597A26B8E6F40036002B /* LoginVC.swift in Sources */,
 				E97BC72C26C3F473007A33E7 /* HomeVC.swift in Sources */,
 				E9F9611426B8943800AF6929 /* SignupVC.swift in Sources */,
+				E935261F26C43462003F5511 /* SubTitleCell.swift in Sources */,
 				E97BC72826C3F3C2007A33E7 /* FoodBankSection.swift in Sources */,
 				A2DCE94C26B91BFC00CC3A6C /* SignUpBackend.swift in Sources */,
 				E9B6603C26BF051E00E769F2 /* DonationDetailPage.swift in Sources */,
 				E935261A26C430A6003F5511 /* TitleCell.swift in Sources */,
 				A2DA315426C0F85B0008A27C /* DataQueries.swift in Sources */,
+				E935261D26C43411003F5511 /* SubTitleSection.swift in Sources */,
 				E935261826C4307B003F5511 /* TitleSection.swift in Sources */,
 				E97BC72526C3F321007A33E7 /* Section.swift in Sources */,
 				E9F9611026B8943800AF6929 /* AppDelegate.swift in Sources */,

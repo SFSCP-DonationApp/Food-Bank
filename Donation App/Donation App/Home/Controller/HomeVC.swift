@@ -16,7 +16,7 @@ class HomeVC: UIViewController {
     lazy var sections: [Section] = [
             TitleSection(title: "Home"),
             FoodBankSection(items: foodBanks),
-            TitleSection(title: "Food Banks"),
+            SubTitleSection(title: "Food Banks"),
             FoodBankSection(items: foodBanks),
        ]
        lazy var collectionViewLayout: UICollectionViewLayout = {
@@ -48,6 +48,7 @@ class HomeVC: UIViewController {
 
         // register the cells
         collectionView.register(TitleCell.self, forCellWithReuseIdentifier: TitleCell.identifier)
+        collectionView.register(SubTitleCell.self, forCellWithReuseIdentifier: SubTitleCell.identifier)
         collectionView.register(FoodBankCell.self, forCellWithReuseIdentifier: FoodBankCell.identifier)
 
         // adding to the view

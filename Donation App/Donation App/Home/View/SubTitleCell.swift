@@ -1,5 +1,5 @@
 //
-//  TitleCell.swift
+//  SubTitleCell.swift
 //  Donation App
 //
 //  Created by Eric Morales on 8/11/21.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class TitleCell: UICollectionViewCell {
+class SubTitleCell: UICollectionViewCell {
     // MARK: Properties
-    static var identifier: String = "TitleCell"
+    static var identifier: String = "SubTitleCell"
     let label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 38, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
         label.textColor = .systemYellow
         label.numberOfLines = 0
         label.textAlignment = .left
