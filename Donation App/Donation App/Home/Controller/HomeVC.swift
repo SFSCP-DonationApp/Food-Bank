@@ -14,7 +14,10 @@ class HomeVC: UIViewController {
     let foodBanks: [FoodBanks] = [FoodBanks(name: "Food Bank Distribution center", address: "4000 Redwood Rd", hours: "8am-12pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30am-5pm")]
 
     lazy var sections: [Section] = [
-           FoodBankSection(items: foodBanks)
+            TitleSection(title: "Home"),
+            FoodBankSection(items: foodBanks),
+            TitleSection(title: "Food Banks"),
+            FoodBankSection(items: foodBanks),
        ]
        lazy var collectionViewLayout: UICollectionViewLayout = {
            var sections = self.sections
@@ -44,6 +47,7 @@ class HomeVC: UIViewController {
         collectionView.delegate = self
 
         // register the cells
+        collectionView.register(TitleCell.self, forCellWithReuseIdentifier: TitleCell.identifier)
         collectionView.register(FoodBankCell.self, forCellWithReuseIdentifier: FoodBankCell.identifier)
 
         // adding to the view
