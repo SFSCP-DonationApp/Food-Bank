@@ -11,13 +11,13 @@ class HomeVC: UIViewController {
     // MARK: Properties
     var collectionView: UICollectionView!
     
-    let foodBanks: [FoodBanks] = [FoodBanks(name: "Food Bank Distribution center", address: "4000 Redwood Rd", hours: "8am-12pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30am-5pm")]
+    let foodBanks: [FoodBanks] = [FoodBanks(name: "Food Bank Distribution center", address: "4000 Redwood Rd", hours: "8am-12pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30am-5pm"), FoodBanks(name: "Food Bank Distribution center", address: "4000 Redwood Rd", hours: "8am-12pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30am-5pm")]
 
     lazy var sections: [Section] = [
             TitleSection(title: "Home"),
-            FoodBankSection(items: foodBanks),
+            AmountDonatedSection(userName: "Ezra"),
             SubTitleSection(title: "Food Banks"),
-            FoodBankSection(items: foodBanks),
+            FoodBankSection(items: foodBanks)
        ]
        lazy var collectionViewLayout: UICollectionViewLayout = {
            var sections = self.sections
@@ -48,6 +48,7 @@ class HomeVC: UIViewController {
 
         // register the cells
         collectionView.register(TitleCell.self, forCellWithReuseIdentifier: TitleCell.identifier)
+        collectionView.register(AmountDonatedCell.self, forCellWithReuseIdentifier: AmountDonatedCell.identifier)
         collectionView.register(SubTitleCell.self, forCellWithReuseIdentifier: SubTitleCell.identifier)
         collectionView.register(FoodBankCell.self, forCellWithReuseIdentifier: FoodBankCell.identifier)
 
