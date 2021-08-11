@@ -12,6 +12,11 @@
 		A2DA315426C0F85B0008A27C /* DataQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA315326C0F85B0008A27C /* DataQueries.swift */; };
 		A2DCE94C26B91BFC00CC3A6C /* SignUpBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DCE94B26B91BFC00CC3A6C /* SignUpBackend.swift */; };
 		CC0ED977E3DFEE7CF05585D0 /* Pods_Donation_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC1D6C868AFCCF03D0AA1E6 /* Pods_Donation_App.framework */; };
+		E935261626C42BFA003F5511 /* FoodBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935261526C42BFA003F5511 /* FoodBank.swift */; };
+		E97BC72526C3F321007A33E7 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BC72426C3F321007A33E7 /* Section.swift */; };
+		E97BC72826C3F3C2007A33E7 /* FoodBankSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BC72726C3F3C2007A33E7 /* FoodBankSection.swift */; };
+		E97BC72A26C3F425007A33E7 /* FoodBankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BC72926C3F425007A33E7 /* FoodBankCell.swift */; };
+		E97BC72C26C3F473007A33E7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BC72B26C3F473007A33E7 /* HomeVC.swift */; };
 		E9B6603A26BF04FD00E769F2 /* DonationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6603926BF04FD00E769F2 /* DonationDetailVC.swift */; };
 		E9B6603C26BF051E00E769F2 /* DonationDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6603B26BF051E00E769F2 /* DonationDetailPage.swift */; };
 		E9F9611026B8943800AF6929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9610F26B8943800AF6929 /* AppDelegate.swift */; };
@@ -30,6 +35,11 @@
 		A2DA315326C0F85B0008A27C /* DataQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataQueries.swift; sourceTree = "<group>"; };
 		A2DCE94B26B91BFC00CC3A6C /* SignUpBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBackend.swift; sourceTree = "<group>"; };
 		AA369B05F3B1FDB28478F51E /* Pods-Donation App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donation App.debug.xcconfig"; path = "Target Support Files/Pods-Donation App/Pods-Donation App.debug.xcconfig"; sourceTree = "<group>"; };
+		E935261526C42BFA003F5511 /* FoodBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBank.swift; sourceTree = "<group>"; };
+		E97BC72426C3F321007A33E7 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		E97BC72726C3F3C2007A33E7 /* FoodBankSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBankSection.swift; sourceTree = "<group>"; };
+		E97BC72926C3F425007A33E7 /* FoodBankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBankCell.swift; sourceTree = "<group>"; };
+		E97BC72B26C3F473007A33E7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		E9B6603926BF04FD00E769F2 /* DonationDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationDetailVC.swift; sourceTree = "<group>"; };
 		E9B6603B26BF051E00E769F2 /* DonationDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationDetailPage.swift; sourceTree = "<group>"; };
 		E9F9610C26B8943800AF6929 /* Donation App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Donation App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +83,50 @@
 				A2DA315326C0F85B0008A27C /* DataQueries.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		E935261426C42BE4003F5511 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E935261526C42BFA003F5511 /* FoodBank.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E97BC71F26C3F262007A33E7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E97BC72226C3F2C7007A33E7 /* Section */,
+				E97BC72126C3F2BE007A33E7 /* View */,
+				E97BC72026C3F278007A33E7 /* Controller */,
+				E935261426C42BE4003F5511 /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E97BC72026C3F278007A33E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E97BC72B26C3F473007A33E7 /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E97BC72126C3F2BE007A33E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E97BC72926C3F425007A33E7 /* FoodBankCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E97BC72226C3F2C7007A33E7 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				E97BC72426C3F321007A33E7 /* Section.swift */,
+				E97BC72726C3F3C2007A33E7 /* FoodBankSection.swift */,
+			);
+			path = Section;
 			sourceTree = "<group>";
 		};
 		E9B6603626BF046D00E769F2 /* Donation Detail */ = {
@@ -128,6 +182,7 @@
 				E9F9612426B89D6000AF6929 /* Signup */,
 				EEF4597326B8E6AB0036002B /* Login */,
 				E9B6603626BF046D00E769F2 /* Donation Detail */,
+				E97BC71F26C3F262007A33E7 /* Home */,
 				A2DCE94A26B91BCD00CC3A6C /* Data */,
 				E9F9612326B89D4200AF6929 /* Resources */,
 			);
@@ -316,12 +371,17 @@
 				EEF4597826B8E6DC0036002B /* LoginView.swift in Sources */,
 				E9B6603A26BF04FD00E769F2 /* DonationDetailVC.swift in Sources */,
 				E9F9612C26B8A25200AF6929 /* SignupPage.swift in Sources */,
+				E97BC72A26C3F425007A33E7 /* FoodBankCell.swift in Sources */,
 				A2BA291B26B922F000506D26 /* LoginBackend.swift in Sources */,
+				E935261626C42BFA003F5511 /* FoodBank.swift in Sources */,
 				EEF4597A26B8E6F40036002B /* LoginVC.swift in Sources */,
+				E97BC72C26C3F473007A33E7 /* HomeVC.swift in Sources */,
 				E9F9611426B8943800AF6929 /* SignupVC.swift in Sources */,
+				E97BC72826C3F3C2007A33E7 /* FoodBankSection.swift in Sources */,
 				A2DCE94C26B91BFC00CC3A6C /* SignUpBackend.swift in Sources */,
 				E9B6603C26BF051E00E769F2 /* DonationDetailPage.swift in Sources */,
 				A2DA315426C0F85B0008A27C /* DataQueries.swift in Sources */,
+				E97BC72526C3F321007A33E7 /* Section.swift in Sources */,
 				E9F9611026B8943800AF6929 /* AppDelegate.swift in Sources */,
 				E9F9611226B8943800AF6929 /* SceneDelegate.swift in Sources */,
 			);
