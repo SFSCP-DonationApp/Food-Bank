@@ -11,7 +11,7 @@ class HomeVC: UIViewController {
     // MARK: Properties
     var collectionView: UICollectionView!
     
-    let foodBanks: [FoodBanks] = [FoodBanks(name: "Food Bank Distribution center", address: "4000 Redwood Rd", hours: "8am-12pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30am-5pm"), FoodBanks(name: "Food Bank Distribution center", address: "4000 Redwood Rd", hours: "8am-12pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30am-5pm")]
+    let foodBanks: [FoodBanks] = [FoodBanks(name: "Food Bank Distribution Center", address: "4000 Redwood Rd, New York PR 00791", hours: "8am-12pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30am-5pm"), FoodBanks(name: "Food Bank Distribution center", address: "4000 Redwood Rd", hours: "8am-12pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30am-5pm")]
 
     lazy var sections: [Section] = [
             TitleSection(title: "Home"),
@@ -57,6 +57,10 @@ class HomeVC: UIViewController {
 
         // reloads all data in collectionView
         collectionView.reloadData()
+    }
+    
+    @objc func donateButtonPressed(){
+        print("I want to donate here")
     }
 
     override func viewDidAppear(_ animated: Bool) {
