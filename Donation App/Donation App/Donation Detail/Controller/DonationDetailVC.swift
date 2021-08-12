@@ -36,6 +36,6 @@ class DonationDetailVC: UIViewController {
     @objc func backButtonPressed() {
         
         print("Back button pressed!")
-        
+        self.dismiss(animated: true, completion: nil)
     }
 }

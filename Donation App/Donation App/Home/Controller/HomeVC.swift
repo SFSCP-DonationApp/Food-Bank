@@ -61,6 +61,11 @@ class HomeVC: UIViewController {
     
     @objc func donateButtonPressed(){
         print("I want to donate here")
+        
+        let rootVC = DonationDetailVC()
+        let navigationController = UINavigationController(rootViewController: rootVC)
+        navigationController.setNavigationBarHidden(true, animated: true)
+        present(navigationController, animated: true, completion: nil)
     }
 
     override func viewDidAppear(_ animated: Bool) {
