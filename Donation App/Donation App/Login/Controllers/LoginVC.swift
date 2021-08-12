@@ -31,11 +31,17 @@ class LoginVC: UIViewController {
     let emailTextField: UITextField = {
         let emailText = UITextField()
         emailText.placeholder = "Email"
+        emailText.autocapitalizationType = .none
+        emailText.autocorrectionType = .no
+        
         return emailText
     }()
     let passwordTextField: UITextField = {
         let passwordText = UITextField()
         passwordText.placeholder = "Password"
+        passwordText.autocapitalizationType = .none
+        passwordText.autocorrectionType = .no
+        
         return passwordText
     }()
     
