@@ -11,8 +11,8 @@ class HomeVC: UIViewController {
     // MARK: Properties
     var collectionView: UICollectionView!
     
-    let foodBanks: [FoodBanks] = [FoodBanks(name: "Food Bank Distribution Center", address: "4000 Redwood Rd, New York PR 00791", hours: "8am-12pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30am-5pm"), FoodBanks(name: "Food Bank Distribution center", address: "4000 Redwood Rd", hours: "8am-12pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30am-5pm")]
-
+    let foodBanks: [FoodBanks] = [FoodBanks(name: "Food Bank Distribution Center", address: "4000 Redwood Rd, New York PR 00791", hours: "8:00 am - 12:00 pm"), FoodBanks(name: "Alameda County Community Food Bank", address: "7900 Edgewater Dr", hours: "8:30 am - 5:00 pm"), FoodBanks(name: "Project Outreach Inc-E Oakland", address: "6629 Bancroft Ave", hours: "8:00 am - 4:00 pm"), FoodBanks(name: "California Association of Food Banks", address: "1624 Franklin St", hours: "8:00 am - 5:00 pm")]
+    
     lazy var sections: [Section] = [
             TitleSection(title: "Home"),
             AmountDonatedSection(userName: "Ezra"),
@@ -59,10 +59,11 @@ class HomeVC: UIViewController {
         collectionView.reloadData()
     }
     
-    @objc func donateButtonPressed(){
-        print("I want to donate here")
+    @objc func donateButtonPressed() {
         
         let rootVC = DonationDetailVC()
+        //rootVC.foodBankName = "Food Bank Distribution Center"
+
         let navigationController = UINavigationController(rootViewController: rootVC)
         navigationController.setNavigationBarHidden(true, animated: true)
         present(navigationController, animated: true, completion: nil)

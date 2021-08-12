@@ -9,6 +9,7 @@ import UIKit
 
 class DonationDetailPage: UIView {
     // MARK: Properties
+    static var foodBankNameText: String = ""
     let topStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -38,6 +39,17 @@ class DonationDetailPage: UIView {
         label.numberOfLines = 0
         label.textAlignment = .left
         label.text = "Donation details"
+        
+        return label
+    }()
+    let foodBankName: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 25, weight: .thin)
+        label.textColor = .systemGray
+        label.numberOfLines = 0
+        label.textAlignment = .left
+        label.text = foodBankNameText
         
         return label
     }()
@@ -179,8 +191,9 @@ class DonationDetailPage: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(parentVC viewController: UIView) {
+    convenience init(parentVC viewController: UIView, foodBankName: String) {
         self.init()
+        self.foodBankName.text = foodBankName
         setup(viewController: viewController)
     }
     
@@ -189,6 +202,7 @@ class DonationDetailPage: UIView {
         viewController.addSubview(topStack)
         topStack.addArrangedSubview(backButton)
         topStack.addArrangedSubview(titleLabel)
+        topStack.addArrangedSubview(foodBankName)
         
         viewController.addSubview(formStack)
         formStack.addArrangedSubview(weightLabel)

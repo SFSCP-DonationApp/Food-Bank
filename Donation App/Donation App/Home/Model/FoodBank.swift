@@ -20,10 +20,6 @@ struct FoodBanks {
         self.hours = hours
     }
     
-//let name = ["Food Bank Distribution center", "Alameda County Community Food Bank", "Project Outreach Inc-E Oakland", "California Association of Food Banks"]
-//let address = ["4000 Redwood Rd", "7900 Edgewater Dr", "6629 Bancroft Ave", "1624 Franklin St" ]
-//let hours = ["8am-12pm", "8:30am-5pm", "8am-4pm", "8am-5pm"]
-//
     func returnName() -> String {
         return self.name
     }

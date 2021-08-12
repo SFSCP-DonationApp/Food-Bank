@@ -10,7 +10,8 @@ import UIKit
 class DonationDetailVC: UIViewController {
 
     // MARK: Properties
-    lazy var donationPage: DonationDetailPage = DonationDetailPage(parentVC: self.view)
+    var foodBankName: String = ""
+    lazy var donationPage: DonationDetailPage = DonationDetailPage(parentVC: self.view, foodBankName: foodBankName)
     
     // MARK: VC LifeCycle
     override func viewDidLoad() {

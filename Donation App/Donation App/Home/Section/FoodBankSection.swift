@@ -41,10 +41,10 @@ struct FoodBankSection: Section {
     }
     
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FoodBankCell.self), for: indexPath) as! FoodBankCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FoodBankCell.self), for: indexPath) as! FoodBankCell
         cell.setContents(foodBank: items[indexPath.item])
-            
-            return cell
-        }
+
+        return cell
+    }
 }
 
