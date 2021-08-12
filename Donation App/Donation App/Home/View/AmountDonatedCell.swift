@@ -11,44 +11,22 @@ class AmountDonatedCell: UICollectionViewCell {
     //Create properties
     static var identifier: String = "AmountDonatedCell"
     
-    //This is the backgroundview of the card
-    let backgroundImage: UIImageView = {
-        let background = UIImageView()
-        background.translatesAutoresizingMaskIntoConstraints = false
-        background.backgroundColor = .systemGray2
-        background.layer.cornerRadius = 10
-        
-        return background
-    }()
-    
-    let stackView: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 20
-        stack.distribution = .fillProportionally
-        
-        return stack
-    }()
-    
     var nameLabel: UILabel = {
-        let name = UILabel()
-        name.translatesAutoresizingMaskIntoConstraints = false
-        name.numberOfLines = 0
-        name.textAlignment = .left
-        name.font = UIFont(name: "Helvetica", size: 22)
-        name.textColor = UIColor(white:1.0, alpha: 0.8)
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 25, weight: .medium)
+        label.textColor = .white
         
-        return name
+        return label
     }()
-    
     var donationLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.textAlignment = .left
-        label.font = UIFont(name: "Helvetica", size: 16)
-        label.textColor = UIColor(white:1.0, alpha: 0.8)
+        label.font = UIFont.systemFont(ofSize: 22, weight: .regular)
+        label.textColor = .white
+        label.textAlignment = .center
         return label
     }()
     
@@ -63,23 +41,24 @@ class AmountDonatedCell: UICollectionViewCell {
     }
     
     func setup() {
-        //Add the view to the hierarchy
-        self.addSubview(backgroundImage)
-        backgroundImage.addSubview(stackView)
-        stackView.addArrangedSubview(nameLabel)
-        stackView.addArrangedSubview(donationLabel)
+        // AmountDonatedCell view cell
+        self.contentView.backgroundColor = .systemGray2
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+
         
-        //Add the constraints
-        //background Image
-        backgroundImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
-        backgroundImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 5).isActive = true
-        backgroundImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5).isActive = true
-        backgroundImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 5).isActive = true
-        // stackView
-        stackView.widthAnchor.constraint(equalTo: self.layoutMarginsGuide.widthAnchor, multiplier: 0.5).isActive = true
-        stackView.heightAnchor.constraint(equalTo: self.layoutMarginsGuide.heightAnchor, multiplier: 0.6).isActive = true
-        stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        // MARK: Adding views to the hierarchy
+        self.addSubview(nameLabel)
+        self.addSubview(donationLabel)
+        
+        // MARK: Constraints
+        NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 40),
+            nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            
+            donationLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 20),
+            donationLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+        ])
         
     }
     
