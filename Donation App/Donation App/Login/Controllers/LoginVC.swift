@@ -103,6 +103,8 @@ class LoginVC: UIViewController {
         let existingUser = ExistingUser(email: emailTextField.text!, password: passwordTextField.text!)
         LogIn().LoginTap(ExistingUser: existingUser, errorLabel: errorLabel)
         print(Auth.auth().currentUser?.email)
+        
+        UIApplication.shared.windows.first?.rootViewController = HomeVC()
     }
     
     @objc func forgotPasswordPressed(sender: UIButton!){

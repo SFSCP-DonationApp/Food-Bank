@@ -29,7 +29,7 @@ class SignupVC: UIViewController {
         let newUser = NewUser(name:formData.nameTextField.text!, email: formData.emailTextField.text!, address: formData.streetAddressTextField.text!, city: formData.cityTextField.text!, zipcode: formData.zipCodeTextField.text!, password: formData.passwordTextField.text!)
         SignUp().SignUpTap(NewUser: newUser, errorLabel: errorLabel)
         
-        
+        UIApplication.shared.windows.first?.rootViewController = HomeVC()
     }
 }
 
