@@ -68,6 +68,7 @@ class SignupPage: UIView {
         textField.borderStyle = .roundedRect
         textField.autocapitalizationType = .none
         textField.autocorrectionType = .no
+        textField.keyboardType = .emailAddress
         
         return textField
     }()
@@ -107,6 +108,7 @@ class SignupPage: UIView {
         textField.borderStyle = .roundedRect
         textField.autocapitalizationType = .none
         textField.autocorrectionType = .no
+        textField.keyboardType = .numbersAndPunctuation
         
         return textField
     }()
@@ -179,6 +181,8 @@ class SignupPage: UIView {
         return button
     }()
     
+    lazy var tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+    
     // MARK: Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -242,5 +246,30 @@ class SignupPage: UIView {
             joinButton.widthAnchor.constraint(equalTo: bottomStack.widthAnchor),
             loginButton.heightAnchor.constraint(equalTo: promptLabel.heightAnchor)
         ])
+        
+        // MARK: Gesture Recognizer
+        viewController.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+
+        if nameTextField.isEditing {
+            nameTextField.resignFirstResponder()
+            
+        } else if emailTextField.isEditing {
+            emailTextField.resignFirstResponder()
+            
+        } else if streetAddressTextField.isEditing {
+            streetAddressTextField.resignFirstResponder()
+            
+        } else if cityTextField.isEditing {
+            cityTextField.resignFirstResponder()
+            
+        } else if zipCodeTextField.isEditing {
+            zipCodeTextField.resignFirstResponder()
+            
+        } else if passwordTextField.isEditing {
+            passwordTextField.resignFirstResponder()
+        }
     }
 }

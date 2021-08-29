@@ -44,14 +44,15 @@ extension LoginVC {
         backButton.translatesAutoresizingMaskIntoConstraints = false
         backButton.isUserInteractionEnabled = true
         backButton.backgroundColor = .clear
-        backButton.tintColor = .white
+        backButton.tintColor = .black
+        backButton.isHidden = true
         //set up the constraints
         backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         backButton.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 70).isActive = true
     }
     
     func setupLoginLabel(){
-        subtitleLabel.textColor = .white
+        subtitleLabel.textColor = .black
         subtitleLabel.font = UIFont.boldSystemFont(ofSize: 36)
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         subtitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -90,7 +91,7 @@ extension LoginVC {
     func setupLoginButton(){
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.isUserInteractionEnabled = true
-        loginButton.backgroundColor = .orange
+        loginButton.backgroundColor = .systemYellow
         loginButton.tintColor = .white
         loginButton.frame.size.width = 200
         loginButton.frame.size.height = 30
@@ -106,14 +107,14 @@ extension LoginVC {
         forgotLink.translatesAutoresizingMaskIntoConstraints = false
         forgotLink.isUserInteractionEnabled = true
         forgotLink.backgroundColor = .clear
-        forgotLink.tintColor = .orange
+        forgotLink.tintColor = .systemYellow
         //set up the constraints
         forgotLink.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20).isActive = true
         forgotLink.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor).isActive = true
     }
     func setupSignUpLabel(){
         signUpLabel.translatesAutoresizingMaskIntoConstraints = false
-        signUpLabel.textColor = .orange
+        signUpLabel.textColor = .black
         signUpLabel.font = UIFont.systemFont(ofSize: 15)
         signUpLabel.translatesAutoresizingMaskIntoConstraints = false
         signUpLabel.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor, constant: 30).isActive = true
@@ -124,7 +125,7 @@ extension LoginVC {
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
         signUpButton.isUserInteractionEnabled = true
         signUpButton.backgroundColor = .clear
-        signUpButton.tintColor = .orange
+        signUpButton.tintColor = .black
         //set up the constraints
         signUpButton.centerYAnchor.constraint(equalTo: signUpLabel.centerYAnchor).isActive = true
         signUpButton.centerXAnchor.constraint(equalTo: signUpLabel.centerXAnchor, constant: 120).isActive = true

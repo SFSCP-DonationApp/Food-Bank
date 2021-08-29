@@ -31,6 +31,7 @@ class DonationDetailVC: UIViewController {
     @objc func reserveDonationButtonPressed() {
         
         print("Reserve donation slot!")
+        self.dismiss(animated: true, completion: nil)
         
     }
     
