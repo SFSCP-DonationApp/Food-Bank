@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginVC: UIViewController {
     
@@ -18,6 +19,7 @@ class LoginVC: UIViewController {
         back.setTitle("Back", for: .normal)
         back.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         back.addTarget(self, action: #selector(backButtonPressed), for: UIControl.Event.touchUpInside)
+        back.tintColor = .black
         return back
     }()
     let subtitleLabel: UILabel = {
@@ -28,14 +30,26 @@ class LoginVC: UIViewController {
         return subtitle
     }()
     let emailTextField: UITextField = {
-        let emailText = UITextField()
-        emailText.placeholder = "Email"
-        return emailText
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.placeholder = "Email"
+        textField.borderStyle = .roundedRect
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.keyboardType = .emailAddress
+        
+        return textField
     }()
     let passwordTextField: UITextField = {
-        let passwordText = UITextField()
-        passwordText.placeholder = "Password"
-        return passwordText
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.placeholder = "Password"
+        textField.borderStyle = .roundedRect
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.isSecureTextEntry = true
+        
+        return textField
     }()
     
     let loginButton: UIButton = {
@@ -70,13 +84,21 @@ class LoginVC: UIViewController {
         signup.addTarget(self, action: #selector(signupPressed), for: UIControl.Event.touchUpInside)
         return signup
     }()
+    
+    lazy var tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "sfscp_create.png")!)
+        self.view.backgroundColor = .systemGray6
         setupLoginContentView()
-        assignbackground()
+        //assignbackground()
+        
+        
+        // MARK: Gesture Recognizer
+        self.view.addGestureRecognizer(tapGesture)
     }
     
     func assignbackground(){
@@ -93,17 +115,34 @@ class LoginVC: UIViewController {
       }
     
     @objc func backButtonPressed(sender: UIButton!){
-        print("Take me back to Sign up page!")
+        UIApplication.shared.windows.first?.rootViewController = SignupVC()
     }
     @objc func loginButtonPressed(sender: UIButton!){
         print("button pressed!")
+        let errorLabel = UILabel()
+        let existingUser = ExistingUser(email: emailTextField.text!, password: passwordTextField.text!)
+        LogIn().LoginTap(ExistingUser: existingUser, errorLabel: errorLabel)
+        print(Auth.auth().currentUser?.email)
+        
+        UIApplication.shared.windows.first?.rootViewController = HomeVC()
     }
     
     @objc func forgotPasswordPressed(sender: UIButton!){
         print("I forgot my password, help!")
     }
     @objc func signupPressed(sender: UIButton!){
-        print("Take me to the signup page")
+        UIApplication.shared.windows.first?.rootViewController = SignupVC()
+    }
+    
+    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+
+        if emailTextField.isEditing {
+            emailTextField.resignFirstResponder()
+            
+        } else if passwordTextField.isEditing {
+            passwordTextField.resignFirstResponder()
+            
+        }
     }
 }
 
